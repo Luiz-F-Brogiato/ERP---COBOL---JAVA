@@ -1,0 +1,1 @@
+# Este é o FastBullet ERP, um software de gestão empresarial (ERP) de código aberto, desenvolvido em COBOL + JAVA com o framework spring. Ele é projetado para ajudar pequenas e médias empresas a gerenciar suas operações diárias de forma eficiente e eficaz.
