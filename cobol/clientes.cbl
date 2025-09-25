@@ -1,0 +1,25 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. CLIENTE.
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+       SELECT CLIENTE-FILE ASSIGN TO "cobol/clientes.dat"
+           ORGANIZATION IS LINE SEQUENTIAL.
+       DATA DIVISION.
+       FILE SECTION.
+       FD CLIENTE-FILE.
+       01 CLIENTE-RECORD.
+              05 CLIENTE-CODIGO      PIC 9(5).
+              05 CLIENTE-NOME        PIC A(30).
+              05 CLIENTE-EMAIL       PIC A(50).
+
+       WORKING-STORAGE-SECTION.
+
+       01 WS-EOF                     PIC X(3) VALUE 'NO'.
+       PROCEDURE DIVISION.
+       MAIN.
+           OPEN EXTENDED CLIENTE-FILE.
+           DISPLAY "CLIENTE CADASTRADO COM SUCESSO!".
+           CLOSE CLIENTE-FILE.
+       
+       STOP RUN.

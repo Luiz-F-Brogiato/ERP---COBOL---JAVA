@@ -1,19 +1,6 @@
-CREATE TABLE cliente (
-  id SERIAL PRIMARY KEY,
-  nome VARCHAR(100),
-  email VARCHAR(100)
-);
-
-CREATE TABLE produto (
-  id SERIAL PRIMARY KEY,
-  nome VARCHAR(100),
-  preco DECIMAL(10,2)
-);
-
-CREATE TABLE pedido (
-  id SERIAL PRIMARY KEY,
-  cliente_id INT REFERENCES clientes(id),
-  produto_id INT REFERENCES produtos(id),
-  quantidade INT,
-  data TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE clientes (
+    id SERIAL PRIMARY KEY,
+    codigo INTEGER UNIQUE NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100)
 );
